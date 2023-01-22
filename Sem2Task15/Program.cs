@@ -1,17 +1,18 @@
-﻿int num1 = int.Parse(Console.ReadLine()??"0");
+﻿int day = int.Parse(Console.ReadLine()??"0");
 
-int num2 = int.Parse(Console.ReadLine()??"0");
-
-if(num1*num1 == num2)
+if(day >7  && day <1)
 {
-    Console.WriteLine("Второе число квадрат первого");
+    Console.WriteLine("Это не день недели'");
 
 }
-if else(num1*num1 == num2)
-{
-    Console.WriteLine("Первое число квадрат второго");
-}
+
+if(day>5)
+    {
+    Console.WriteLine("Выходной");
+    }
 else
-{
-    Console.WriteLine("не квадраты чисел");
-}
+   {
+    Console.WriteLine("Рабочий день");
+   }
+
+// Dictionary C# ключ/значение;

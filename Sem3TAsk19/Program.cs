@@ -1,6 +1,5 @@
-﻿Console.Write("Введите пятизначное число: ");
-
-int ReadData(string msg);
+﻿//Метод читает данные от пользователя
+int ReadData(string msg)
 {
     Console.WriteLine(msg);
     return int.Parse(Console.ReadLine()?? "0");
@@ -8,6 +7,8 @@ int ReadData(string msg);
 }
 
 
+
+// вычисляем палиндром или не палиндром
 bool PalinTest(int n)
 {
     bool res =false;
@@ -18,38 +19,21 @@ bool PalinTest(int n)
     res =((d1==d4) && (d2==d3))? true: false;
     return res;
 }
-PrintData("Расстояние между точками:", PalinTest);
 
 
-
-
-int ReadData(string msg);
-{
-    Console.WriteLine(msg);
-    return int.Parse(Console.ReadLine()?? "0");
-
-}
-
-void PrintData(string msg, double res)
+//Выводим результат пользователю
+void PrintData(string msg, bool res)
 {
     Console.WriteLine(msg+res);
 
 }
 
-double Calclen(int x1, int x2, int y1 , int y2)
-{
-    double res=0;
-    res = Math.Sqrt(Math.Pow(x1=x2, 2)+Math.Pow(y1-y2,2));
-    return res;
+//Вводим пятизначное число
+int number5 = ReadData("Введите пятизначное число");
 
-}
+//Вызов метода(определения палиндрома)
+bool len = PalinTest(number5);
 
-int coordX1 = ReadData("Введите координату x1");
-int coordX2 = ReadData("Введите координату x2");
-int coordY1 = ReadData("Введите координату y1");
-int coordY2 = ReadData("Введите координату y2");
-
-double len= Calclen(coordX1, coordX2, coordY1, coordY2);
-
-PrintData("Расстояние между точками:", len);
+//Выдаем результат
+PrintData("Данное число палиндром:", len);
 

@@ -23,6 +23,7 @@ double[] Gen1DArray(int len, double minValue, double maxValue)
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = new Random().NextDouble() * ((maxValue + 1.0) - minValue);
+        arr[i] = Math.Round(arr[i],2);
     }
     return arr;
 }
